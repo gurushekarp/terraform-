@@ -1,0 +1,111 @@
+ 1  yum install git pyton python-pip python-levelopenssl -y
+    2  amazon-linux-extras install ansible2 -y
+    3  useradd ansible
+    4  passwd ansible
+    5  visudo
+    6  vi /etc/ansible/ansible.cfg
+    7  vi/etc/ssh/sshd_config
+    8  vi/etc/ssh/sshd-config
+    9  vi /etc/ssh/sshd-config
+   10  vi /etc/ssh/sshd_config
+   11  systemctl restart ansible
+   12  systemctl restart sshd
+   13  vi /etc/ansible/ansible.cfg
+   14  vi /etc/ansible/hosts
+   15  systemctl restart sshd
+   16  ansible --list -hosts
+   17  ansibleall --list -hosts
+   18  ansible all --list -hosts
+   19  ll
+   20  ansible all --list-hosts
+   21  ansible vicky --list-hosts
+   22  ansible Ammu --list-hosts
+   23  ansible all(3) --list-host
+   24  ansible all[2] --list-host
+   25  ansible all[0] --list-host
+   26  ansible vicky[1] --list-host
+   27  su -ansible
+   28  su - ansible
+   29  vi /etc/ansible/ansible.cfg
+   30  su - ansible
+   31  ansible all --list-hosts
+   32  ansible all --list
+   33  ansible vikcy --list
+   34  ansible vikcy --list-host
+   35  ansible vicky --list-host
+   36  ansible ammu --list-host
+   37  ansible Ammu --list-host
+   38  su - ansible
+   39  ll
+   40  su - ansible
+   41  yum install httpd -y
+   42  systemctl status httpd
+   43  vim nani2.yml
+   44  vim nani3.yml
+   45  vim -o
+   46  vim -o nani2.yml nani3.yml
+   47  su - ansible
+   48  ll
+   49  rm -rf *
+   50  ll
+   51  su - ansible
+   52  ll
+   53  su - ansible
+   54  ll
+   55  su - ansible
+   56  su - anisble
+   57  vim project.yml
+   58  ansible-playbook project.yml
+   59  clear
+   60  ll
+   61  su - ansible
+   62  ll
+   63  vim project.yml
+   64  su -ansible
+   65  vim ammu.yml
+   66  ll
+   67  su - ansible
+   68  vim sudo
+   69  su - ansible
+   70  ll
+   71  su - ansible
+   72  su -ansible
+   73  ll
+   74  su - ansible
+   75  history
+
+   1  useradd ansible
+    2  passwd ansible
+    3  visudo
+    4  vi /etc/ssh/sshd_config
+    5  systemctl restart sshd
+    6  histroy
+    7  history
+    8  clear
+    9  visudo
+   10  git --version
+   11  clear
+   12  cat /etc/group
+   13  ll
+   14  su - anisble
+   15  ll
+   16  su -ansible
+   17  su - ansible
+   18  yum install httpd -y
+   19  sytemctl restart httpd
+   20  systemctl restart httpd
+   21  systemctl status  httpd
+   22  clear
+   23  cd /var
+   24  ll
+   25  cd www
+   26  ll
+   27  cd html
+   28  ll
+   29  vim html
+   30  vim index.txt
+   31  rm - rf *
+   32  rm -rf *
+   33  ll
+   34  vim index.html
+   35  history

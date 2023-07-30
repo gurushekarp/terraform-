@@ -1,0 +1,426 @@
+ip-172-31-23-60 ~]# history
+    1  yum install docker -y
+    2  docker version
+    3  systemctl status docker
+    4  systemctl restart docker
+    5  docker version
+    6  docker images
+    7  docker run ubuntu
+    8  docker images
+    9  docker ps -a
+   10  docker run -it --name cont1 ubuntu
+   11  docker ps -a
+   12  docker run -it --name cont2 ubuntu
+   13  docker ps -a
+   14  docker start cont1 cont2
+   15  docker ps -a
+   16  docker ps
+   17  docker stop cont2
+   18  docker rm cont2
+   19  docker ps -a
+   20  docker stop cont1
+   21  docker rm cont1
+   22  docker ps -a
+   23  clear
+   24  docker run -it --name cont1 ubuntu
+   25  clear
+   26  docker ps -a
+   27  docker commit cont1 image1
+   28  docker images
+   29  docker run -it --name cont2 image1
+   30  systemctl restart docker
+   31  docker pull ubuntu
+   32  docker images
+   33  docker ps -a
+   34  docker start cont1 cont2
+   35  docker ps -a
+   36  docker attach cont2
+   37  docker ps -a
+   38  docker container
+   39  docker container ls
+   40  docker container ls -a
+   41  docker attach cont2
+   42  docker start cont2
+   43  docker container ls -a
+   44  docker container ls -n 2
+   45  docker container ls -latest
+   46  docker container ls --latest
+   47  docker container ls -q
+   48  docker container ls -q -a
+   49  docker container rm -f $(docker container ls -a -q)
+   50  docker ps -a
+   51  clear
+   52  docker run -it --name cont1 image1
+   53  docker container ls -a -s
+   54  exit 
+   55  history
+   56  clear
+   57  docker ps -a
+   58  docker start cont1
+   59  docker kill cont1
+   60  docker ps -a
+   61  clear
+   62  vim Dockerfile
+   63  docker build -t image1 .
+   64  docker images
+   65  docker run -it --name cont4 image1
+   66  docker ps -a
+   67  docker start cont4
+   68  docker attach cont4
+   69  vim Dockerfile
+   70  docker build -t image2 .
+   71  docker run -it --name cont2 image1
+   72  ll
+   73  vim Dockerfile
+   74  docker container ps -a
+   75  docker start cont2
+   76  docker attach cont2
+   77  docker build -t cont2 image2
+   78  docker build -t cont2 image1
+   79  docker build -t image .
+   80  docker images
+   81  docker run -it --name cont5 image2
+   82  docker rm -f $(docker container ls -q -s)
+   83  docker container rm -f $(docker ls -q -s)
+   84  docker container rm -f $(docker ls -q -a)
+   85  docker ps -a
+   86  vim Dockerfile
+   87  docker build -t image3 .
+   88  docker run -it --name cont3 image3
+   89  vim Dockerfile
+   90  docker build -t image4 .
+   91  touch abc.txt
+   92  docker build -t image4 .
+   93  touch mavem.tar.gz
+   94  docker build -t image4 .
+   95  touch maven.tar.gz
+   96  docker build -t image4 .
+   97  vim Dockerfile
+   98  docker build -t image4 .
+   99  docker run -it --name cont6 image4
+  100  vim Dockerfile
+  101  docker build -t image5 .
+  102  docker run image5
+  103  exit
+  104  vim Dockerfile
+  105  docker build -t image6 .
+  106  vim Dockerfile
+  107  docker build -t image6 .
+  108  vim Dockerfile
+  109  docker build -t image6 .
+  110  vim index.html
+  111  docker run -dit -p 8081:80 image6
+  112  docker images
+  113  docker build -t image6 .
+  114  docker images
+  115  docker run -dit -p 8081:80 image6
+  116  vim index.html
+  117  docker run -dit -p 8081:80 image6
+  118  docker run -dti -p 8081:80 image6
+  119  docker run -dti -p 8082[C:80 image6
+  120  docker run -dti -p 8082:80 image6
+  121  vim Dockerfile
+  122  docker build -t image7 .
+  123  docker run -dti -p 8083:80 image7
+  124  docker run -dti image7
+  125  docker run -dti -p 8081:80 image7
+  126  vim index.html
+  127  docker run -dti -p 8081:80 image7
+  128  docker run -dti -p 8080:80 image7
+  129  clear
+  130  docker ps -a
+  131  clear
+  132  vim Dockerfile1
+  133  ll
+  134  rm -rf Dockerfile1
+  135  ll
+  136  vim Dockerfile
+  137  vim indext.html
+  138  docker images
+  139  docker container
+  140  docker container ls
+  141  vim index.html
+  142  ll
+  143  cat index.html
+  144  rm -rf indext.html
+  145  ll
+  146  docker build -dti -p 8081:80 image7
+  147  vim Dockerfile
+  148  docker build -dti -p 8081:80 image7
+  149  histroy
+  150  history
+  151  docker run -dti -p 8081:80 image7
+  152  docker run -dti -p 8081:80 image8
+  153  docker build -t image8 .
+  154  docker run -dti -p 8081:80 image8
+  155  docker ps -a
+  156  docker container rm -f (docker container ls -q -a)
+  157  docker container rm -f $(docker container ls -q -a)
+  158  docker ps -a
+  159  docker rmi image1
+  160  docker images
+  161  docker rmi image2
+  162  $ (docker rmi $(docker images -a -q)
+  163  docker rmi $(docker images -a -q)
+  164  docker images
+  165  docker rmi $(docker images -a -q)
+  166  $ docker rmi $(docker images -q -f dangling=true)
+  167  docker rmi $(docker images -q -f dangling=true)
+  168  docker rmi $(docker images -q -a -f dangling=true)
+  169  docker rmi image3
+  170  docker images
+  171  ll
+  172  docker ps -a
+  173  docker images
+  174  docker rmi image
+  175  docker images
+  176  rm -rf *
+  177  ll
+  178  clear
+  179  vim Dockerfile
+  180  docker build -t image1 .
+  181  ll
+  182  docker run -it --name cont1 image1
+  183  docker images
+  184  docker run -it --name cont2 image2
+  185  docker run -it --name cont2 image1
+  186  docker run -it ---name cont3 -v /volume1 ubuntu
+  187  docker run -it --name cont3 -v /volume1 ubuntu
+  188  docker run -it --name cont4 -v /volume22 ubuntu
+  189  docker run -it --name cont5 -v /volume11 --privileged=true --volume-from cont4 ubuntu
+  190  docker run -it --name cont5 -v /volume11 --privileged=true --volumes-from cont4 ubuntu
+  191  docker ps -a
+  192  docker start cont4 && docker attach cont4
+  193  clear
+  194  docker start cont5 & docker attach cont5
+  195  docker commit con5 image2
+  196  docker comit cont5 image2
+  197   docker commit cont5 image2
+  198  docker run -it --name cont6 -v /volume33 image2
+  199  docker run -it --name cont5 --privileged=true --volumes-from cont5 ubuntu
+  200  docker run -it --name cont5 --privileged=true --volumes-from cont4 ubuntu
+  201  docker run -it --name cont7 --privileged=true --volumes-from cont4 ubuntu
+  202  clear
+  203  docker volume ls
+  204  cd /home/ec2-user/
+  205  ll
+  206  cd
+  207  docker run -it --name cont8 -v /home/ec2-user:mycont-volume --privileged=true ubntu
+  208  docker run -it --name cont8 -v /home/ec2-user:/mycont-volume --privileged=true ubntu
+  209  docker run -it --name cont8 -v /home/ec2-user:/mycont-volume --privileged=true ubuntu
+  210  ll
+  211  cd ec2-user
+  212  cd 
+  213  ll
+  214  cd home
+  215  ll
+  216  cd home/ec2-user
+  217  cd /home
+  218  cd /ec2-user
+  219  cd /ec2-user/
+  220  cd/home/ec2-user/
+  221  ll
+  222  cd /ec2-user
+  223  ll
+  224  cd /ec2-user/
+  225  cd /ec2-user
+  226  cd /ec2-user/
+  227  cd /ec2-user
+  228  cd /home/ec2-user/
+  229  ll
+  230  exit
+  231  mkdir vicky
+  232  touch aws{1.10}
+  233  ll
+  234  docker run -it --name cont9 -v "$(pwd):/devopsvol ubuntu
+  235  exit
+  236  :
+  237  :wq
+  238  ll
+  239  docker run -it --name cont9 -v "$(pwd):/devopsvol ubuntu
+  240  exit
+  241  docker run -it --name cont9 -v "$(pwd)":/devopsvol ubuntu
+  242  docker volume ls
+  243  docker volume create vicky1
+  244  docker volume create vicky2
+  245  docker volume rm vicky1 vicky2
+  246  ll
+  247  docker volume ls
+  248  docker container rm -f $(docker container -a -q)
+  249  docker container rm -f $(docker container ls -a -q)
+  250  docker volume ls
+  251  docker ps -a
+  252  docker volume ls
+  253  docker volume prune
+  254  docker volume ls
+  255  docker volume create vicky1 vicky2
+  256  docker volume create vicky1 
+  257  docker volume create vicky2
+  258  docker run -it --name cont99 --mount source=/vicky1,destination=/vicky99 ubuntu
+  259  docker volume ls
+  260  docker volume create volume1
+  261  docker run -it --name cont99 --mount source=/volume1,destination=/volume99 ubuntu
+  262  docker run -it --name cont99 --mount source=volume1,destination=/volume99 ubuntu
+  263  docker volume create volume99
+  264  docker run -it --name cont10 -v volume99:/volume10 ubuntu
+  265  docker run -it --name cont20 -v volume99:/volume10 ubuntu
+  266  history
+  268  docker volume ls
+  269  docker rmi volume1
+  270  docker volume rm $(docker volume ls -q)
+  271  docker rm volume1
+  272  docker volume ls
+  273  docker volume inspect volume1
+  274  cd /var/lib/docker/volumes/volume1/_data/
+  275  touch vikcy{1..10}
+  276  ll
+  277  exi
+  278  exit
+  279  docker run -it --name cont11 --mount source=volume1,desination=/volume50 ubuntu
+  280  docker run -it --name cont11 --mount source=volume1,destination=/volume50 ubuntu
+  281  docker volume ls
+  282  cd /var/lib/docker/volumes/volume1/_data/
+  283  ll
+  284  exit
+  285  clear
+  286  docker images
+  287  docker ps -a
+  288  docker tag image2 rajivgandhi123
+  289  /
+  290  docker tag image2 rajivgandhi123
+  291  /
+  292  docker tag image2 rajivgandhi123/repo-1
+  293  docker push rajivgandhi/repo-1
+  294  docker tag image2 rajivgandhi123/repo-1
+  295  docker push rajivgandhi/repo-1
+  296  docker tag image1 rajivgandhi123/repo-1
+  297  docker push rajivgandhi/repo-1
+  298  clear
+  299  docker tag image1 rajivgandhi123/repo-1
+  300  docker push rajivgandhi/repo-1
+  301  docker tags
+  302  docker --help
+  303  docker tag image1 rajivgandhi123/repo-1
+  304  docker push rajivgandhi123/repo-1
+  305  docker login
+  306  docker push rajivgandhi123/repo-1
+  307  docker pull rajivgandhi123/repo-1
+  308  docker images
+  309  docker run -it --name cont1 rajivgandhi123/repo-1
+  310  docker images
+  311  docker tag image2 rajivgandhi/repo-2
+  312  docker push rajivgandhi/repo-2
+  313  docker login
+  314  docker push rajivgandhi/repo-2
+  315  docker tag image2 rajivgandhi/repo-2
+  316  docker push rajivgandhi/repo-2
+  317  docker login
+  318  docker push rajivgandhi/repo-2
+  319  docker tag image2 rajivgandhi123/repo-2
+  320  docker push rajivgandhi123/repo-2
+  321  docker pull rajivgandhi123/repo-2
+  322  docker images
+  323  clear
+  324  docker pull jenkinsci/jenkins:lts
+  325  clear 
+  326  docker run -p 8080:8080 -p 50000:50000 jenkins
+  327  docker run -p 8080:8080 -p 50000:50000
+  328  docker run -p 8080:8080 -p 50000:50000 jenkinsci/jenkins
+  329  clear
+  330  docker swarm init --advertise-addr 34.227.9.95
+  331  docker nodes
+  332  docker nodes ls
+  333  docker node ls
+  334  docker node rm zwq5ew93bxa76482bjcolyyqz
+  335  docker node ls
+  336  docker node rm 0konkmoqsfaxl621fc2ab8lg1
+  337  docker node ls
+  338  clear
+  339  docker swarm init --advertise-addr 34.227.9.95
+  340  docker swarm join-token worker
+  341  docker swarm join-token manager
+  342  docker node ls
+  343  clear
+  344  docker service create --name mobilerecharge --replicas 2 --publish 80:80 httpd
+  345  docker service ls
+  346  docker service create --name mobilerecharge --replicas 2 --publish 80:80 httpd
+  347  docker service ls
+  348  docker ps -a
+  349  docker stop e0b525b85a1b
+  350  docker ps -a
+  351  clear
+  352  docker service create --name hdfc --replicas 3 --publish 80:80 httpd
+  353  docker service create --name hdfc --replicas 3 --publish 81:80 httpd
+  354  docker service ls
+  355  docker ps -a
+  356  docker service rm ba277d8491af
+  357  docker service rm hdfc
+  358  docker ps -a
+  359  clear
+  360  docker service ls -a
+  361  docker service ps -a
+  362  docker service ps mobilerecharge
+  363  docker service inspect  mobilerecharge
+  364  clear
+  365  docker service --help
+  366  clear
+  367  history
+   1  yum install docker -y
+    2  docker swarm join --token SWMTKN-1-0ay6pygk75ux4ve916b6snw7duujv43mu20f3jqnuijc53apqj-0my7protvexmm7xlnpkvl5gqc 34.227.9.95:2377
+    3  systemctl restart docker
+    4  docker swarm join --token SWMTKN-1-0ay6pygk75ux4ve916b6snw7duujv43mu20f3jqnuijc53apqj-0my7protvexmm7xlnpkvl5gqc 34.227.9.95:2377
+    5  docker swarm leave
+    6  history
+  yum install docker -y
+    2  docker swarm join --token SWMTKN-1-0ay6pygk75ux4ve916b6snw7duujv43mu20f3jqnuijc53apqj-0my7protvexmm7xlnpkvl5gqc 34.227.9.95:2377
+    3  systemctl restart docker 
+    4  docker swarm join --token SWMTKN-1-0ay6pygk75ux4ve916b6snw7duujv43mu20f3jqnuijc53apqj-0my7protvexmm7xlnpkvl5gqc 34.227.9.95:2377
+    5  docker swarm leave
+    6  docker node ls
+    7  docker swarm join-token worker
+    8  clear
+    9  docker swarm join-token worker
+   10      docker swarm join --token SWMTKN-1-0ay6pygk75ux4ve916b6snw7duujv43mu20f3jqnuijc53apqj-5m66bhlm0p7ispuvjy6g0hul1 34.227.9.95:2377
+   11  history
+1  clear
+  372  sudo apt-get update
+  373    $ sudo apt-get install docker-compose-plugin
+  374  sudo apt-get install docker-compose-plugin
+  375  sudo apt-get update
+  376  DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+  377  mkdir -p $DOCKER_CONFIG/cli-plugins
+  378  curl -SL https://github.com/docker/compose/releases/download/v2.12.2/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+  379  chmod +x /usr/local/bin/docker-compose
+  380  sudo chmod +x /usr/local/bin/docker-compose
+  381  ll
+  382  docker-compose --version
+  383  sudo 1n -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+  384  clear
+  385  sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  386  sudo chmod +x /usr/local/bin/docker-compose
+  387  sudo 1n -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+  388  docker-compose --version
+  389  chmod +x /usr/local/bin/docker-compose
+  390  sudo 1n -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+  391  sudo In -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+  392  sudo 1n -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+  393  docker-compose --version
+  394  clear
+  395  vim docker-compose.yml
+  396  docker stack deploy --compose-file docker-compose.yml
+  397  vim docker-compose.yml
+  398  docker stack deploy --compose-file docker-compose.yml mystack
+  399  docker node ls
+  400  docker node ps
+  401  docker nodes ps
+  402  docker nodes ls
+  403  docker swarm init --advertise-addr 107.22.138.85
+  404  docker swarm leave
+  405  docker swarm init --advertise-addr 107.22.138.85
+  406  docker swarm leave -f
+  407  docker swarm init --advertise-addr 107.22.138.85
+  408  docker stack deploy --compose-file docker-compose.yml mystack
+  409  docker stack ls
+  410  docker stack ps ls
+  411  docker stack ps mystack
+  412  docker stack rm mystack

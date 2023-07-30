@@ -1,0 +1,13 @@
+MAVEN COMMANDS:
+
+get maven repo: https://downloads.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
+to unzip: tar -zxvf filename
+INSTALL JAVA: yum install java-1.8.0-openjdk -y
+INSTALL MAVEN: yum install maven -y
+TO CHECK VERSION: mvn -version
+to get a project: mvn archetype:generate
+to compile code: mvn compile
+to test: mvn test
+to build: mvn package
+to install: mvn install
+to clean: mvn clean

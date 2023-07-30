@@ -1,0 +1,142 @@
+    1 sudo apt update -y
+    2  clear
+    3  ll
+wget https://releases.hashicorp.com/terraform/1.1.3/terraform_1.1.3_linux_amd64.zip
+    4  apt intall unzip -y
+    5  apt install unzip -y
+    6  ll
+    7  unzip terraform_1.1.3_linux_amd64.zip
+    8  ll
+    9  mv terraform /usr/local/bin
+   10  ll
+   11  mkdir terraform
+   12  cd terraform
+   13  terraform -version
+   14  vim main.tf
+   15  terraform init
+   16  vim main.tf
+   17  terraform init
+   18  terraform plan
+   19  terraform apply
+   20  terraform destroy
+   21  clear
+   22  vim main.tf
+   23  terraform init
+   24  terraform plan
+   25  terraform apply
+   26  vim main.tf
+   27  ll
+   28  cd terraform
+   29  vim main.tf
+   30  terraform apply
+   31  clear
+   32  terraform destroy
+   33  cd terraform
+   34  terraform destroy
+   35  clear
+   36  vim main.tf
+   37  terraform init
+   38  terraform plan
+   39  terraform apply
+   40  vim main.tf
+   41  terraform init
+   42  terraform plan
+   43  terraform apply
+   44  clear
+   45  ll
+   46  cd terraform
+   47  ll
+   48  cat main.tf
+   49  vim main.tf
+   50  terraform init
+   51  vim main.tf
+   52  terraform init
+   53  terraform plan
+   54  terraform apply
+   55  terraform destroy
+   56  vim main.tf
+   57  terraform init
+   58  terraform plan
+   59  terraform apply
+   60  vim main.tf
+   61  terraform apply
+   62  vim main.tf
+   63  terraform init
+   64  terraform plan
+   65  terraform apply
+   66  vim main.tf
+   67  terraform apply
+   68  terraform destroy
+   69  clear
+   70  vim main.tf
+   71  terraform init
+   72  terraform plan
+   73  terraform apply
+   74  terraform destroy
+   75  vim main.tf
+   76  terraform init
+   77  terraform plan
+   78  terraform apply
+   79  terraform destroy
+   80  vim main.tf
+   81  terraform init
+   82  terraform plan
+   83  terraform apply
+   84  terraform destroy
+   85  vim main.tf
+   86  terraform init
+   87  vim main.tf
+   88  terraform init
+   89  terraform plan
+   90  terraform apply
+   91  vim main.tf
+   92  terraform init
+   93  terraform plan
+   94  vim main.tf
+   95  terraform plan
+   96  terraform apply
+   97  terraform destroy
+   98  vim main.tf
+   99  terraform init
+  100  vim main.tf
+  101  terraform init
+  102  vim main.tf
+  103  terraform init
+  104  terraform plan
+  105  terraform apply
+  106  clear 
+  107  vim main.tf
+  108  terraform init
+  109  terraform plan
+  110  terraform apply
+  111  terraform destroy
+  112  vim main.tf
+  113  vim variable.tf
+  114  terraform init
+  115  vim variable.tf
+  116  terraform init
+  117  vim variable.tf
+  118  vim main.tf
+  119  terraform init
+  120  vim variable.tf
+  121  terraform init
+  122  terraform plan
+  123  terraform apply
+  124  terraform destroy
+  125  clear
+  126  histroy
+  127  history
+
+
+.....................................................................................................
+TERRAFORM -->
+
+MAIN.TF ----> CLIENT REQUIREMENTS
+PROVIDER.TF ----> TARGET
+     MODULES :-
+Ec2---->        main.tf & variable.tf
+S3 Buckets--->  main.tf & variable.tf
+VPC ---->       main.tf & variable.tf
+
+TERRAFORM SetUp...>
+

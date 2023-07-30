@@ -1,0 +1,215 @@
+sudo apt update -y
+sudo apt upgrade -y
+sudo -i
+
+PRE -REQUSITES:
+apt install wget unzip vim curl gcc openssl build-essential libgd-dev libssl-dev libapache2-mod-php php-gd php apache2
+-----------------------------------------------------------------------------------------------------------------------------
+INSTALL NAGIOS CORE:
+
+export VER="4.4.6"
+curl -SL https://github.com/NagiosEnterprises/nagioscore/releases/download/nagios-$VER/nagios-$VER.tar.gz | tar -xzf -
+cd nagios-4.4.6
+
+TO COMPILE: 
+
+./configure
+
+make all
+make install-groups-users
+usermod -a -G nagios www-data
+make install
+make install-init
+make install-config
+make install-commandmode
+make install-webconf
+
+a2enmod rewrite cgi
+systemctl restart apache2
+
+make install-exfoliation
+make install-classicui
+
+------------------------------
+
+cd ..
+VER="2.3.3"
+--------------------------------
+TO GET NAGIOS PLUGINS:
+
+curl -SL https://github.com/nagios-plugins/nagios-plugins/releases/download/release-$VER/nagios-plugins-$VER.tar.gz | tar -xzf -
+./configure
+make install
+
+
+Create a nagiosadmin account for logging into the Nagios web interface. Note the password you need it while login to Nagios web console.
+
+sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin       
+sudo service apache2 restart       
+
+
+sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+
+
+systemctl enable --now nagios
+systemctl status nagios
+--------------------------------------
+
+CLIENT: 
+
+sudo apt update -y
+sudo -i
+
+apt install nagios-plugins nagios-nrpe-server
+systemctl status nagios-nrpe-server
+
+vim /etc/nagios/nrpe.cfg  (NAGIOS-SERVER PUBLIC IP)
+systemctl restart nagios-nrpe-server
+/usr/sbin/nrpe -V /etc/nagios/nrpe.cfg -f
+
+-----------------------------------
+
+SERVER: 
+sudo vim /usr/local/nagios/etc/nagios.cfg
+
+sudo mkdir  -p /usr/local/nagios/etc/servers
+sudo vim  /usr/local/nagios/etc/servers/host.cfg
+
+define host {
+        use                             linux-server
+        host_name                       pubg
+        alias                           Apache server
+        address                         10.128.15.202
+        max_check_attempts              5
+        check_period                    24x7
+        notification_interval           30
+        notification_period             24x7
+}
+
+systemctl restart nagios
+ufw allow 5666/tcp
+ ufw reload
+ ufw status
+
+sudo /usr/local/nagios/bin/nagios  -v  /usr/local/nagios/etc/nagios.cfg
+
+
+# =========================================================================================
+  nagios commands
+# ==========================================================================================
+ sudo apt update
+    2  exit
+    3  apt install wget unzip vim curl gcc openssl build-essential libgd-dev libssl-dev libapache2-mod-php php-gd php apache2
+    4  export VER="4.4.6"
+    5  curl -SL https://github.com/NagiosEnterprises/nagioscore/releases/download/nagios-$VER/nagios-$VER.tar.gz | tar -xzf -
+    6  ll
+    7  cd nagios-4.4.6
+    8  ll
+    9  ./configure
+   10  make all
+   11  make install-groups-users
+   12  usermod -a -G nagios www-data
+   13  make install
+   14  make install init
+   15  make install config
+   16  make install-congig
+   17  make install-config
+   18  make install-commandmode
+   19  make install-webconf
+   20  a2emod rewrite cgi
+   21  a2enmod rewrite cgi
+   22  systemctl restart apache2
+   23  make install-exfoliation
+   24  make install-classicui
+   25  make install-exfoliation
+   26  sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+   27  ll
+   28  cd
+   29  ll
+   30  VER="2.3.3"
+   31  curl -SL https://github.com/nagios-plugins/nagios-plugins/releases/download/release-$VER/nagios-plugins-$VER.tar.gz | tar -xzf -
+   32  ll
+   33  cd nagios-plugins-2.3.3/
+   34  ./configure
+   35  make install
+   36  service apache2 restart
+   37  sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   38  systemctl enable --now nagios
+   39  sudo service apache2 restart 
+   40  systemctl enable --now nagios
+   41  ll
+   42  ./configure
+   43  make install
+   44  systemctl enable --now nagios
+   45  touch nagios.service
+   46  systemctl enable --now nagios
+   47  systemctl status nagios
+   48  systemctl enable --now nagios
+   49  cd 
+   50  curl -SL https://github.com/NagiosEnterprises/nagioscore/releases/download/nagios-$VER/nagios-$VER.tar.gz | tar -xzf -
+   51  ll
+   52  curl -SL https://github.com/nagios-plugins/nagios-plugins/releases/download/release-$VER/nagios-plugins-$VER.tar.gz | tar -xzf -
+   53  ll
+   54  cd nagios-plugins-2.3.3/
+   55  ll
+   56  ./configure
+   57  sudo service apache2 restart
+   58  cd 
+   59  sudo service apache2 restart       
+   60  udo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   61  sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+   62  systemctl enable --now nagios
+   63  ll
+   64  clear
+   65  usermod -a -G nagios www-data
+   66  make install
+   67  ll
+   68  cd nagios-4.4.6/
+   69  make install
+   70  make install-groups-users
+   71  usermod -a -G nagios www-data
+   72  make install
+   73  make install-init
+   74  make install-config
+   75  make install-commandmode
+   76  make install-webconf
+   77  make install-config
+   78  make install-webconf
+   79  make install-commandmode
+   80  make install-exfoliation
+   81  make install-classicui
+   82  ll
+   83  cd
+   84  ll
+   85  cd nagios-plugins-2.3.3/
+   86  l
+   87  ll
+   88  systemctl enable --now nagios
+   89  systemctl status nagios
+   90  clear
+   91  vim /usr/local/nagios/etc/nagios.cfg
+   92  mkdir  -p /usr/local/nagios/etc/servers
+   93  vim  /usr/local/nagios/etc/servers/host.cfg
+   94  ll
+   95  cd
+   96  ll
+   97  vim /usr/local/nagios/etc/nagios.cfg
+   98  mkdir  -p /usr/local/nagios/etc/servers
+   99  mkdir /usr/local/nagios/etc/servers
+  100  cd /usr/local/nagios/etc/servers
+  101  vim host.cfg
+  102  systemctl restart nagios
+  103  ufw allow 5666/tcp
+  104  ufw reload
+  105  cd
+  106  history
+1  apt install nagios-plugins nagios-nrpe-server -y
+    2  systemctl status nagios-nrpe-server
+    3  vim /etc/nagios/nrpe.cfg 54.92.205.30
+    4  systemctl status nagios-nrpe-server
+    5  usr/sbin/nrpe -V /etc/nagios/nrpe.cfg -f
+    6  /usr/sbin/nrpe -V /etc/nagios/nrpe.cfg -f
+    7  clear
+    8  sudo apt update -y
+    9  sudo -i
+   10  history

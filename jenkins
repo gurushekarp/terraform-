@@ -1,0 +1,62 @@
+
+    1  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    2  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+    3  amazon-linux-ectras install epel -y
+    4  amazon-linux-extras install epel -y
+    5  amazon-linux-extras install java-openjdk11 -y
+    6  yum install git jenkins maven
+    7  systemctl restart jenkins
+    8  clear
+    9  java --version
+   10  sudo update-alternatives java--version
+   11  sudo update-alternatives config --version
+   12  sudo update-alternatives config --java
+   13  cd /ec2-user/jenkins
+   14  cd home/ec2-user
+   15  cd /home/ec2-user/
+   16  cd workspace
+   17  cd jenkins
+   18  ll
+   19  cd workspace
+   20  ll
+   21  cd job-2
+   22  ll
+   23  history
+   1    sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    2    sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+    3  amazon-linux-extras install epel -y
+    4  amazon-linux-extras install java-openjdk11 -y
+    5  yum install git maven jenkins
+    6  clear
+    7  cat /ect/passwd
+    8  useradd jenkins
+    9  cat /etc/passwd
+   10  vim /etc/passwd
+   11  passwd jenkins
+   12  vi sudo
+   13  visudo
+   14  vim /etc/ssh/sshd_config
+   15  clear
+   16  systemctl restart sshd 
+   17  clear
+   18  su - jenkins
+   19  history
+   1    sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    2    sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+    3  amazon-linux-extras install epel -y
+    4  amazon-linux-extras install java-openjdk11 -y
+    5  yum install git maven jenkins
+    6  clear
+    7  cat /ect/passwd
+    8  useradd jenkins
+    9  cat /etc/passwd
+   10  vim /etc/passwd
+   11  passwd jenkins
+   12  vi sudo
+   13  visudo
+   14  vim /etc/ssh/sshd_config
+   15  clear
+   16  systemctl restart sshd 
+   17  clear
+   18  su - jenkins
+   19  history
