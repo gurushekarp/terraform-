@@ -1,7 +1,7 @@
 
     1  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
     2  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-    3  amazon-linux-ectras install epel -y
+    3  amazon-linux-ectras install epel -y   # all traffic-anywhere,22 -anywhere,8080 -custom TCP
     4  amazon-linux-extras install epel -y
     5  amazon-linux-extras install java-openjdk11 -y
     6  yum install git jenkins maven
